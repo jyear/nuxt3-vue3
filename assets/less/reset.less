@@ -1,0 +1,154 @@
+html,
+body {
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+        'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+    font-weight: 400;
+    font-size: var(--abc-f-normal);
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+}
+#__nuxt {
+    height: 100%;
+}
+a {
+    color: #409eff;
+    text-decoration: none;
+}
+a:focus,
+a:hover {
+    color: #66b1ff;
+}
+a:active {
+    color: #3a8ee6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #606266;
+    font-weight: inherit;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+p:first-child {
+    margin-top: 0;
+}
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child {
+    margin-bottom: 0;
+}
+h1 {
+    font-size: 20px;
+}
+h2 {
+    font-size: 18px;
+}
+h3 {
+    font-size: var(--abc-f-large);
+}
+h4,
+h5,
+h6,
+p {
+    font-size: inherit;
+}
+p {
+    line-height: 1.8;
+}
+sub,
+sup {
+    font-size: 13px;
+}
+small {
+    font-size: var(--abc-f-normal);
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+#root {
+    height: 100%;
+}
+/* 清除滑条样式 */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: none;
+}
+
+/*chrome--------------------------------------------start*/
+::-webkit-scrollbar {
+    height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #414141;
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #414141;
+}
+/*chrome--------------------------------------------end*/
+/*IE--------------------------------------------start*/
+* {
+    /*三角箭头的颜色*/
+    scrollbar-arrow-color: #c0c4cc;
+    /*滚动条滑块按钮的颜色*/
+    scrollbar-face-color: #a2a2a3;
+    /*滚动条整体颜色*/
+    scrollbar-highlight-color: #a2a2a3;
+    /*滚动条阴影*/
+    scrollbar-shadow-color: #a2a2a3;
+    /*滚动条轨道颜色*/
+    scrollbar-track-color: #f4f4f5;
+    /*滚动条3d亮色阴影边框的外观颜色——左边和上边的阴影色*/
+    scrollbar-3dlight-color: #a2a2a3;
+    /*滚动条3d暗色阴影边框的外观颜色——右边和下边的阴影色*/
+    scrollbar-darkshadow-color: #a2a2a3;
+    /*滚动条基准颜色*/
+    scrollbar-base-color: #f4f4f5;
+}
+body {
+    --abc-side-color: #fff;
+    --abc-header-color: #001529;
+    --abc-content-bg-color: #f0f2f5;
+    --abc-side-content-color: #0a101d;
+    --abc-green: #2fe904;
+    --abc-blue: #276bff;
+    --abc-nav-blue: #43a4ff;
+    --abc-nav-grey: #7b7b7b;
+    --abc-f-title: 16px;
+    --abc-f-normal: 14px;
+    --abc-f-min: 12px;
+    --abc-f-large: 18px;
+    --abc-f-big: 20px;
+    --abc-f-bold: 600;
+    --abc-f-20: 20px;
+    --abc-border-color: #2e374c;
+    --abc-border-radius: 10px;
+}

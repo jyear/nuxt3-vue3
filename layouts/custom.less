@@ -1,0 +1,23 @@
+.custom-layout {
+    height: 100%;
+    background: var(--abc-content-bg-color);
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    .container {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        align-items: stretch;
+    }
+    .menu {
+        width: 208px;
+        background-color: var(--abc-side-color);
+        box-shadow: 2px 0 8px 0 rgb(29 35 41 / 5%);
+    }
+    .slot-content {
+        flex: 1;
+        min-width: 0;
+        overflow: auto;
+    }
+}

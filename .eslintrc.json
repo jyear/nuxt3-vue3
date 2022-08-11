@@ -1,0 +1,36 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["plugin:vue/vue3-essential", "airbnb-base", "prettier"],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module"
+    },
+    "plugins": ["vue", "@typescript-eslint", "prettier"],
+    "rules": {
+        "prettier/prettier": 1,
+        "vue/multi-word-component-names": [
+            "error",
+            {
+                "ignores": ["index", "custom"] //需要忽略的组件名
+            }
+        ],
+        "no-param-reassign": [
+            2,
+            {
+                "props": true,
+                "ignorePropertyModificationsFor": [
+                    "res", // for Express responses
+                    "item", // for Express responses
+                    "state" // for vuex state 解决assignment to property of function parameter ‘state‘
+                ]
+            }
+        ]
+    },
+    "globals": {
+        "definePageMeta": "readonly"
+    }
+}
