@@ -1,4 +1,4 @@
-import { createStore, Store, StoreOptions } from 'vuex';
+import { createStore, mapState } from 'vuex';
 
 const storeFiles: any = import.meta.globEager('./*.ts');
 const modules = {
@@ -18,6 +18,9 @@ const store = createStore({
 
 export function useStore() {
     return store;
+}
+export function useMapState() {
+    return mapState;
 }
 
 // export default store;

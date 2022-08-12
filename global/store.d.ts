@@ -1,4 +1,4 @@
-import { Store } from 'vuex';
+import { Store, mapState } from 'vuex';
 interface User {
     id: string;
 }
@@ -7,4 +7,5 @@ interface State {
 }
 declare module '@/store' {
     export function useStore(key?: string): Store<State>;
+    export function useMapState(): mapState;
 }
