@@ -1,7 +1,7 @@
 <template>
     <div class="header-box">
         <div class="left">
-            <img src="~/assets/images/common/logo2.png" />
+            <img src="@/assets/images/common/logo2.png" />
         </div>
         <div class="right">
             <el-avatar
@@ -10,7 +10,9 @@
         </div>
     </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import img from '@/assets/images/common/logo2.png';
+</script>
 <style lang="less" scoped>
 @import './index.less';
 </style>

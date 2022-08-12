@@ -9,6 +9,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
     Object.keys(Icons).forEach((key) => {
         // nuxtApp.vueApp.component(key, Icons[key]); // JS中用这行
+        // eslint-disable-next-line import/namespace
         nuxtApp.vueApp.component(key, Icons[key as keyof typeof Icons]); // TS中用这行
     });
 });

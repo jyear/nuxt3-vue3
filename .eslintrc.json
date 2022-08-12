@@ -1,15 +1,30 @@
 {
+    "root": true,
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true
     },
-    "extends": ["plugin:vue/vue3-essential", "airbnb-base", "prettier"],
+    "parser": "vue-eslint-parser",
     "parserOptions": {
         "ecmaVersion": "latest",
         "parser": "@typescript-eslint/parser",
         "sourceType": "module"
     },
+    "extends": [
+        "plugin:vue/vue3-essential",
+        // "airbnb-base",
+        "prettier",
+        "plugin:prettier/recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript"
+    ],
     "plugins": ["vue", "@typescript-eslint", "prettier"],
+    "settings": {
+        "import/resolver": {
+            "alias": true
+        }
+    },
     "rules": {
         "prettier/prettier": 1,
         "vue/multi-word-component-names": [
@@ -27,6 +42,12 @@
                     "item", // for Express responses
                     "state" // for vuex state 解决assignment to property of function parameter ‘state‘
                 ]
+            }
+        ],
+        "import/no-unresolved": [
+            2,
+            {
+                "ignore": ["^@/", "^swiper/"] // @ 是设置的路径别名
             }
         ]
     },

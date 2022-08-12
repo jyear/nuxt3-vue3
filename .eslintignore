@@ -1,2 +1,3 @@
 nuxt.config.ts
 .node_modules
+global

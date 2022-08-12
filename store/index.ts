@@ -1,7 +1,9 @@
-import { createStore } from 'vuex';
+import { createStore, Store, StoreOptions } from 'vuex';
 
-const storeFiles: any = import.meta.glob('./*.ts', { eager: true });
-const modules: any = {};
+const storeFiles: any = import.meta.globEager('./*.ts');
+const modules = {
+    user: null,
+};
 
 Object.keys(storeFiles).forEach((key: string) => {
     if (key !== './index.ts') {
@@ -10,18 +12,12 @@ Object.keys(storeFiles).forEach((key: string) => {
     }
 });
 
-export const store = createStore({
+const store = createStore({
     modules: { ...modules },
 });
 
 export function useStore() {
     return store;
-}
-
-export interface State {
-    framework: any;
-    common: any;
-    user: any;
 }
 
 // export default store;
